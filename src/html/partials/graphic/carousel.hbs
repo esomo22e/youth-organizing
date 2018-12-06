@@ -1,0 +1,32 @@
+
+
+<section class="carousel">
+    <div class = "yo-carousel__title-container">
+        <div class = "yo-carousel__title">
+            <h1 class = "yo-carousel__hed">{{copy.headline}}</h1>
+            <p class = "yo-carousel__by">By: {{copy.byline}}</p>
+        </div>
+
+    </div>
+    <div class = "instruction">
+        <p class="ms-intro">From the Newsboy strike in 1899 to the anti-NRA protest organized by victims of school shootings, young people have always led the way on civil rights.</p>
+        <p class="ms-guide">Click and hover over the profiles to learn more.</p>
+    </div>
+
+        <div class="yo-carousel">
+
+            {{#each @root.copy.organizers}}
+                <div class = "yo-carousel__container">
+                    <div class="yo-carousel__item {{id}}" style = "background-image:url(./assets/thumb_images/yoThumb_{{thumb-image}}.jpg);">
+                        <a href="#{{id}}" class="yo-carousel__event-info" data-open="{{id}}">
+                            <h1 class="yo-carousel__event">{{event}}</h1>
+                            <h3 class= "yo-carousel__date">{{year}}</h3>
+
+                            <p class="thumb-text">{{thumb-text}}</p>
+                        </a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+
+</section>

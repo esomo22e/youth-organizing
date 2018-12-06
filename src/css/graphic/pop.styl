@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Oleo+Script|PT+Serif|PT+Serif+Caption|Playfair+Display|Rozha+One|Slabo+27px')
+.popup
+  position fixed
+  top 0
+  left -200%
+  width 0
+  height 0
+  overflow hidden
+  z-index 100
+
+  &.show
+    width 100vw
+    height 100vh
+    left 0
+    background-color #FAF0E6
+    z-index 9
+
+  &__inner
+    // padding 10px
+    overflow-y auto
+    height 100%
+
+  &__container
+    display flex
+
+  &__thumb-container
+    background-color #563D13
+    color #FAF0E6
+    padding 20px
+    font-family 'Playfair Display', serif
+    width 30%
+    height 100vh
+
+  &__thumb-caption
+    padding 10px
+    color #FAF0E6
+
+  &__essay-container
+    width 70%
+    column-count 1
+    column-gap 1em
+    padding 10px
+    font-family 'Playfair Display', serif
+    color #000
+    height 100vh
+
+    +mq('bp-1')
+      column-count 2
+
+    +mq('bp-1')
+      column-count 3
+
+  &__photo-essay
+    display inline-block
+    margin-bottom 10px
+    // margin-bottom 30px
+    // background-color blue
+
+
+
+  &__photo-thumb
+    display inline-block
+    // margin-bottom 30px
+
+  &__title
+    font-size 30px
+    font-weight bold
+    margin-bottom 5px
+
+  &__year
+    font-weight bold
+    margin-bottom 5px
+    font-size 20px
+
+  &__credit
+    font-size 11px
+    position relative
+    padding 5px
+    margin-top -22px
+    color #FAF0E6
+
+  &__close
+    font-size 20px
+    padding 5px
+    position absolute
+
+  &__close:after
+    font-family arial
+    color #FAF0E6
+    content '×'
+
+@media only screen and (max-width: 600px)
+
+    .popup
+
+        &__container
+            flex-flow row-reverse wrap
+
+        &__thumb-container
+            width 100%
+
+        &__essay-container
+            width 100%

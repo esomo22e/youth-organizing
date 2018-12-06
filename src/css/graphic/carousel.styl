@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Oleo+Script|PT+Serif|PT+Serif+Caption|Playfair+Display|Rozha+One|Slabo+27px')
+
+.carousel
+    height 100vh
+    background-color #FAF0E6
+    // background-color #e8e8fa
+
+.yo-carousel
+    // padding 0 1% 0 1%
+    margin-top 1%
+    overflow hidden
+    padding-bottom 120px
+
+
+    &__item
+        // background-color #F0FFFF
+        // background-image url(./assets/thumb_images/yoThumb_{{thumb-image}}.jpg)
+        width 100%
+        min-height 400px
+        border 5px solid rgba(86,61,18,0.8)
+        // border-style double
+        background-repeat no-repeat
+        background-size cover
+        background-position 50% 50%
+        // margin 0 5px 0 5px
+
+        +mq('bp-1')
+          width 100%
+          min-height 400px
+
+    &__hed
+        font-size 65px
+        font-weight 600
+        text-align center
+        color #8B4513
+        font-family 'Playfair Display', serif
+        padding 10px
+
+    &__by
+        font-size 25px
+        text-align center
+        color #8B4513
+        font-family 'Playfair Display', serif
+
+    &__event-info
+        display block
+        padding 20px
+        opacity 0
+        z-index 9
+        width 100%
+        height 400px
+        transition .5s ease all
+        color #000
+        background-color rgba(255,245,238,0.6)
+        text-align center
+        text-decoration none
+        // margin 0 auto
+
+        &:hover
+            opacity 1
+            z-index 9
+
+
+    &__event
+        font-size 20px
+        font-weight bold
+        padding 10px
+        margin 20% auto 0 auto
+
+    &__date
+        font-size 15px
+        font-weight bold
+        padding 10px
+
+
+
+p.intro-text
+    padding 10px
+
+.ms-intro
+    margin 0 auto
+    text-align center
+    font-size 20px
+    color #563D13
+    padding 20px
+    width 70%
+
+.ms-guide
+    color #563D13
+    padding 0 10px 0 10px
+    margin-bottom -10px
+    font-size 14px
+
+.slick-slide
+    margin: 0 10px;
+
+button.slick-arrow
+    margin-top -5%
+    z-index 1
+
+button.slick-prev
+    left 0
+    z-index 1
+    // content "<"
+    // background purple
+
+button.slick-prev:before
+    color #ffe4d1
+    font-size: 25px
+
+
+button.slick-next
+    // background purple
+    z-index 1
+    right 0
+    left initial
+
+button.slick-next:before
+    color #ffe4d1
+    font-size: 25px
+
+ul.slick-dots
+    // background purple
+    position absolute
+    bottom 40px
+
+.g-footer
+    background-color #FAF0E6
